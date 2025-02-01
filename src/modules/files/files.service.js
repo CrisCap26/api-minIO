@@ -1,5 +1,5 @@
 const minioClient = require("../../config/minio");
-const BUCKET_NAME = "pruebas"; // Reemplázalo por tu bucket
+const BUCKET_NAME = process.env.BUCKET_NAME;
 
 exports.uploadFile = async (file) => {
   return new Promise((resolve, reject) => {
